@@ -4,7 +4,8 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-     """Represent a square."""
+    """Represent a square."""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize a new Square.
 
@@ -18,16 +19,16 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """Get/set the size of the Square."""
         return self.width
 
     @size.setter
-     """Get/set the size of the Square."""
     def size(self, value):
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-         """Update the Square
+        """Update the Square
 
         Args:
             *args (ints): New attribute values.
@@ -67,8 +68,9 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
     def __str__(self):
-         """Return the print() and str() representation of the Square."""
+        """Return the print() and str() representation of the Square."""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def to_dictionary(self):
