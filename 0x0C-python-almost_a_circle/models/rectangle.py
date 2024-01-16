@@ -15,7 +15,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-         """Set/get the width of the Rectangle."""
+        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -28,7 +28,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-         """Set/get the height of the Rectangle."""
+        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -78,7 +78,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
