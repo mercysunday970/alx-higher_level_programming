@@ -1,2 +1,2 @@
 #!/usr/bin/node
-module.expoerts = class Rectangle {};
+module.exports = class Rectangle {};
